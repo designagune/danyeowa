@@ -1,6 +1,9 @@
-import type { Metadata } from "next";
+"use client";
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ServerBar from "./components/ServerBar";
+import Navigation from "./components/Navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,11 +15,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Danyeowa",
-  description: "여행 계획은 우리에게 맡기고 '다녀와!'",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,7 +25,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="app-layout">
+          <ServerBar />
+          <Navigation />
+          <main className="main-content">{children}</main>
+        </div>
       </body>
     </html>
   );
