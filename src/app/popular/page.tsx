@@ -77,8 +77,11 @@ export default function PopularPlaces() {
                 src={place.imageUrl}
                 alt={place.name}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                quality={85}
+                loading="lazy"
+                className="object-cover group-hover:scale-105 group-hover:[transform:scale(1.05)_translateZ(0)] transition-transform duration-300 [backface-visibility:hidden] [-webkit-backface-visibility:hidden]"
                 unoptimized
-                className="object-cover"
               />
               <div className="absolute top-4 right-4 bg-white px-2 py-1 rounded-full text-sm font-semibold">
                 ★ {place.rating}

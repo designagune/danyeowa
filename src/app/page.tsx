@@ -227,9 +227,9 @@ export default function HomePage() {
           src="https://images.unsplash.com/photo-1542051841857-5f90071e7989"
           alt="일본 여행"
           fill
-          unoptimized
           className="object-cover"
           priority
+          unoptimized
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center">
           <div className="text-white p-12">
@@ -368,7 +368,7 @@ export default function HomePage() {
             }}
             autoplay={{
               delay: 5000,
-              disableOnInteraction: false,
+              disableOnInteraction: true,
               pauseOnMouseEnter: true,
             }}
             loop={true}
@@ -382,9 +382,11 @@ export default function HomePage() {
                       src={trip.imageUrl}
                       alt={trip.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      quality={85}
+                      loading="lazy"
+                      className="object-cover group-hover:scale-105 group-hover:[transform:scale(1.05)_translateZ(0)] transition-transform duration-300 [backface-visibility:hidden] [-webkit-backface-visibility:hidden]"
                       unoptimized
-                      className="object-cover"
-                      priority
                     />
                   </div>
                   <div className="p-6">
@@ -439,7 +441,7 @@ export default function HomePage() {
                   alt={destination.name}
                   fill
                   unoptimized
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover group-hover:scale-105 group-hover:[transform:scale(1.05)_translateZ(0)] transition-transform duration-300 [backface-visibility:hidden] [-webkit-backface-visibility:hidden]"
                 />
               </div>
               <div className="p-4">
