@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 다녀와 (Danyeowa) - 여행 계획 웹 애플리케이션
 
-## Getting Started
+디스코드 스타일의 UI를 적용한 현대적인 여행 계획 웹 애플리케이션입니다.
 
-First, run the development server:
+## 주요 기능
+
+- 🌏 인기 여행지 탐색
+- 📅 여행 일정 관리
+- 🎯 맞춤형 여행 추천
+- 📚 여행 가이드 제공
+- 👤 개인화된 프로필
+
+## 기술 스택
+
+- Frontend: Next.js, TypeScript, Tailwind CSS
+- UI 컴포넌트: Custom components with Discord-style design
+- 이미지 최적화: Next.js Image Component
+- 상태 관리: Custom hooks and stores
+
+## 시작하기
+
+### 필수 요구사항
+
+- Node.js 18.0.0 이상
+- npm 또는 yarn
+
+### 설치 방법
 
 ```bash
+# 저장소 클론
+git clone [repository-url]
+
+# 디렉토리 이동
+cd danyeowa
+
+# 의존성 설치
+npm install
+# 또는
+yarn install
+
+# 개발 서버 실행
 npm run dev
-# or
+# 또는
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 프로젝트 구조
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+danyeowa/
+├── src/
+│   ├── app/              # 페이지 컴포넌트
+│   ├── components/       # 재사용 가능한 컴포넌트
+│   ├── store/           # 상태 관리
+│   └── styles/          # 전역 스타일
+├── public/              # 정적 파일
+└── ...
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 이미지 저작권 정보
 
-## Learn More
+이 프로젝트에서 사용된 이미지들의 출처와 라이선스 정보입니다:
 
-To learn more about Next.js, take a look at the following resources:
+### 이모지
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 서버바와 메뉴에 사용된 이모지(✈️, 🗺️, 🎒 등)는 Unicode 표준의 일부로 자유롭게 사용 가능합니다.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Unsplash 이미지
 
-## Deploy on Vercel
+다음 이미지들은 [Unsplash](https://unsplash.com)에서 제공되며, Unsplash 라이선스에 따라 자유롭게 사용 가능합니다:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 도쿄 이미지: Photo by [Unsplash](https://images.unsplash.com/photo-1503899036084-c55cdd92da26)
+- 교토 이미지: Photo by [Unsplash](https://images.unsplash.com/photo-1545569341-9eb8b30979d9)
+- 오사카 이미지: Photo by [Unsplash](https://images.unsplash.com/photo-1590253230532-a67f6bc61c9e)
+- 후쿠오카 이미지: Photo by [Unsplash](https://images.unsplash.com/photo-1575862924838-c166e3814df7)
